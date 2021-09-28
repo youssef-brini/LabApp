@@ -1,0 +1,21 @@
+{
+    "membres": [
+        {
+            "id" : "1",
+            "cin" : "456",
+            "name" : "youssef Brini",
+            "createdDate": "2020-10",
+            "cv" : "https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf",
+            "type" : "Student"
+            },
+            {
+              "id" : "2",
+              "cin" : "457",
+              "name" : " imene Lahyeni ",
+              "createdDate": "2020-10",
+              "cv" : "https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf",
+              "type" : "Enseignant chercheur"
+              }
+          
+    ]
+}
