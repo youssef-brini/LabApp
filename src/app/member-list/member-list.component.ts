@@ -1,6 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { GLOBAL } from '../app-config';
+export interface PeriodicElement {
+  id: string;
+  cin: string;
+  name: string;
+  createdDate: string;
+  cv: string;
+  type: string;
 
+}
 
 
 @Component({
@@ -10,7 +18,7 @@ import { GLOBAL } from '../app-config';
 })
 
 export class MemberListComponent implements OnInit {
-   datasource:any[] = GLOBAL._DB.membres;
+  datasource:PeriodicElement[] = GLOBAL._DB.membres;
   
   displayedColumns: string[] = ['id', 'cin', 'name', 'type','cv','createdDate','action'];
   
