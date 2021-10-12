@@ -7,10 +7,12 @@ import { MemberListComponent } from './member-list/member-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MaterialModule } from './material.module';
+import { MemberFormComponent } from './member-form/member-form.component';
 @NgModule({
   declarations: [
     AppComponent,
-    MemberListComponent
+    MemberListComponent,
+    MemberFormComponent
   ],
   imports: [
     BrowserModule,

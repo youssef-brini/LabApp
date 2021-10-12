@@ -1,14 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Member } from 'src/Models/Member';
+import { MemberService } from 'src/services/member.service';
 import { GLOBAL } from '../app-config';
-export interface PeriodicElement {
-  id: string;
-  cin: string;
-  name: string;
-  createdDate: string;
-  cv: string;
-  type: string;
-
-}
 
 
 @Component({
@@ -18,12 +11,14 @@ export interface PeriodicElement {
 })
 
 export class MemberListComponent implements OnInit {
-  datasource:PeriodicElement[] = GLOBAL._DB.membres;
+  datasource:Member[] = [];
   
   displayedColumns: string[] = ['id', 'cin', 'name', 'type','cv','createdDate','action'];
   
 
-  constructor() { }
+  constructor(private MS : MemberService) {
+    this.datasource = this.MS.tab;
+   }
 
   ngOnInit(): void {
   }
