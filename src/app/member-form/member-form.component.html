@@ -1,18 +1,23 @@
-<body style="background-color: gray;">
-<form >
+<body>
+    <!-- (ngSubmit)="OnSubmit()" -->
+<form [formGroup] = "form" (ngSubmit)="OnSubmit()">
     <mat-form-field>
         <mat-label>CIN</mat-label>
-        <input matInput placeholder="CIN">
+        <input matInput placeholder="CIN" formControlName="cin">
     </mat-form-field>
     <mat-form-field>
         <mat-label>Name</mat-label>
-        <input matInput placeholder="Name">
+        <input matInput placeholder="Name" formControlName="name">
     </mat-form-field>
     <mat-form-field>
         <mat-label>CV</mat-label>
-        <input matInput placeholder="CV">
+        <input matInput placeholder="CV" formControlName="cv">
     </mat-form-field>
-    <button mat-button type="submit" style="background-color: #4CAF50;">submit</button>
+    <mat-form-field>
+        <mat-label>Type</mat-label>
+        <input matInput placeholder="type" formControlName="type">
+    </mat-form-field>
+    <button mat-button type="submit" >submit</button>
 </form>
 
 </body>
